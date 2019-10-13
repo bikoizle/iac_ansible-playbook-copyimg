@@ -1,9 +1,18 @@
 ---
 
 - hosts: localhost
-  vars_files:
-    - vars/main.yml
   tasks:
+    - name: Load playbook vars
+      include_vars:
+        file: "vars/main.yml"
+
+    - name: Load vault vars
+      include_vars: "{{ lookup('first_found', possible_files) }}"
+      vars:
+        possible_files:
+          - "{{ vault }}"
+          - "vars/vault.yml"
+
     - name: Upload an image from a local qcow file
       os_image:
         auth:

@@ -1,8 +1,7 @@
 ---
 
+vault: ""
 url: "http://osserver:5000/v3"
-user: "admin"
-passwd: "supersecret"
 project: "admin"
 project_domain: "Default"
 user_domain: "Default"
