@@ -17,8 +17,8 @@
       os_image:
         auth:
           auth_url: "{{ url }}"
-          username: "{{ user }}"
-          password: "{{ passwd }}"
+          username: "{{ os_user }}"
+          password: "{{ os_passwd }}"
           project_name: "{{ project }}"
           os_project_domain_name: "{{ project_domain }}"
           os_user_domain_name: "{{ user_domain }}"

@@ -1,2 +1,2 @@
-user: "admin"
-passwd: "supersecret"
+os_user: "admin"
+os_passwd: "supersecret"
